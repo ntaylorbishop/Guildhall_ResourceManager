@@ -1,17 +1,16 @@
-﻿Build started 1/28/2015 5:11:49 PM.
+﻿Build started 1/28/2015 11:38:48 PM.
      1>Project "C:\gamedev\Guildhall_ResourceManager\Guildhall_ResourceManager\Guildhall_ResourceManager.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt File_Parser.cpp main.cpp
-         main.cpp
-     1>c:\gamedev\guildhall_resourcemanager\guildhall_resourcemanager\main.cpp(18): error C2512: 'File_Parser' : no appropriate default constructor available
-         Generating Code...
-         Compiling...
-         File_Parser.cpp
-     1>c:\gamedev\guildhall_resourcemanager\guildhall_resourcemanager\file_parser.cpp(10): error C2511: 'File_Parser::File_Parser(void)' : overloaded member function not found in 'File_Parser'
-                 c:\gamedev\guildhall_resourcemanager\guildhall_resourcemanager\file_parser.h(17) : see declaration of 'File_Parser'
-         Generating Code...
-     1>Done Building Project "C:\gamedev\Guildhall_ResourceManager\Guildhall_ResourceManager\Guildhall_ResourceManager.vcxproj" (Build target(s)) -- FAILED.
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Node.cpp
+         Node.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\gamedev\Guildhall_ResourceManager\Debug\Guildhall_ResourceManager.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\gamedev\Guildhall_ResourceManager\Debug\Guildhall_ResourceManager.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\gamedev\Guildhall_ResourceManager\Debug\Guildhall_ResourceManager.lib" /MACHINE:X86 Debug\List.obj
+         Debug\main.obj
+         Debug\Node.obj
+         Debug\UI.obj
+         Guildhall_ResourceManager.vcxproj -> C:\gamedev\Guildhall_ResourceManager\Debug\Guildhall_ResourceManager.exe
+     1>Done Building Project "C:\gamedev\Guildhall_ResourceManager\Guildhall_ResourceManager\Guildhall_ResourceManager.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.53
+Time Elapsed 00:00:00.77

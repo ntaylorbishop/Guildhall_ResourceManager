@@ -16,3 +16,6 @@ List::List(const List& orig) {
 List::~List() {
 }
 
+void List::loadFromFile(string fileContents) {
+
+}
