@@ -1,0 +1,17 @@
+﻿Build started 1/28/2015 5:11:49 PM.
+     1>Project "C:\gamedev\Guildhall_ResourceManager\Guildhall_ResourceManager\Guildhall_ResourceManager.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt File_Parser.cpp main.cpp
+         main.cpp
+     1>c:\gamedev\guildhall_resourcemanager\guildhall_resourcemanager\main.cpp(18): error C2512: 'File_Parser' : no appropriate default constructor available
+         Generating Code...
+         Compiling...
+         File_Parser.cpp
+     1>c:\gamedev\guildhall_resourcemanager\guildhall_resourcemanager\file_parser.cpp(10): error C2511: 'File_Parser::File_Parser(void)' : overloaded member function not found in 'File_Parser'
+                 c:\gamedev\guildhall_resourcemanager\guildhall_resourcemanager\file_parser.h(17) : see declaration of 'File_Parser'
+         Generating Code...
+     1>Done Building Project "C:\gamedev\Guildhall_ResourceManager\Guildhall_ResourceManager\Guildhall_ResourceManager.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.53
