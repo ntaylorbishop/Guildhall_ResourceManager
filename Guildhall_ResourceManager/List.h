@@ -11,7 +11,7 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
-#include <iostream>
+#include <fstream>
 #include <sstream>
 
 #include "Node.h"
@@ -26,6 +26,8 @@ public:
     List();
     virtual ~List();
 
+	void addNode(string node);
+	bool addLinkToNode(string link);
 	void loadFromFile(string fileContents);
 	void displayGraph();
 	bool isNodeUsable(string nodeName);

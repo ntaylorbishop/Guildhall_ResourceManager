@@ -17,11 +17,12 @@ void UI::outputOptions() {
 	string input;
 
 	cout << endl << "Please choose an option (Type corresponding number and hit enter): " << endl;
-	cout << "1. Load from file" << endl;
-	cout << "2. Add Node to graph" << endl;
-	cout << "3. Add Link to node" << endl;
-	cout << "4. Display graph" << endl;
-	cout << "5. End progarm" << endl;
+	cout << "\t1. Load from file" << endl;
+	cout << "\t2. Add Node to graph" << endl;
+	cout << "\t3. Add Link to node" << endl;
+	cout << "\t4. Display graph" << endl;
+	cout << "\t5. Write graph to file" << endl;
+	cout << "\t6. End progarm" << endl;
 
 	cin >> input;
 
@@ -54,27 +55,34 @@ void UI::askForFile() {
 	
 }
 
-void UI::loadFromFile(string fileName) {
-
-}
-
 void UI::takeInput(int inp) {
 	if (inp == 1) { //Load from file
 		askForFile();
 	}
 	else if (inp == 2) { //Add node
-		cout << "do some shiz" << endl;
+		string str;
+		cout << endl << "Please input a string of elements, with the root first and each element separated by a single whitespace:" << endl;
+		cin >> str;
+		NodeList.addNode(str);
 		outputOptions();
 	}
 	else if (inp == 3) { //Add link
-		cout << "do some shiz" << endl;
+		string str;
+		cout << endl << "Please input two elements, with the first being the node and the second being the link to add,";
+		cout << "separated by a single whitespace : " << endl;
+		cin >> str;
+		NodeList.addLinkToNode(str);
 		outputOptions();
 	}
 	else if (inp == 4) { //Display graph
 		NodeList.displayGraph();
 		outputOptions();
 	}
-	else if (inp == 5) { //Quit
+	else if (inp == 5) { //Write graph to file
+		NodeList.writeToFile();
+		outputOptions();
+	}
+	else if (inp == 6) { //Quit
 		terminate = true;
 	}
 	else {

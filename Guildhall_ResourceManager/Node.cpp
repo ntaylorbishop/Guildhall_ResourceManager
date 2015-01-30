@@ -7,6 +7,9 @@
 
 #include "Node.h"
 
+Node::Node() {
+	this->root = "default";
+}
 Node::Node(string root) {
 	this->root = root;
 }
@@ -18,6 +21,9 @@ void Node::addLink(string link) {
 }
 string Node::getName() {
 	return root;
+}
+void Node::setName(string root) {
+	this->root = root;
 }
 vector<string> Node::getLinks() {
 	return links;

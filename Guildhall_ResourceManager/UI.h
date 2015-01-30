@@ -15,14 +15,12 @@ public:
 	virtual ~UI();
 
 	void run();
-
 	void outputOptions();
-	void askForFile();
-
-	void loadFromFile(string fileName);
-
 	void takeInput();
 	void takeInput(int inp);
+
+	void askForFile();
+	void loadFromFile(string fileName);
 private:
 	string fileName;
 	string fileContents;

@@ -17,11 +17,13 @@ using namespace std;
 
 class Node {
 public:
+	Node();
     Node(string root);
     virtual ~Node();
 
 	void addLink(string link);
 	string getName();
+	void setName(string root);
 	vector<string> getLinks();
 private:
 	string root;
