@@ -18,17 +18,14 @@ using namespace std;
 class Node {
 public:
     Node(string root);
-    Node(const Node& orig);
     virtual ~Node();
 
-	void loadFromFile(string fileContents);
-	void addLink(Node* link);
-	void displayGraph();
+	void addLink(string link);
 	string getName();
 	vector<string> getLinks();
 private:
 	string root;
-	vector<Node*> links;
+	vector<string> links;
 };
 
 #endif	/* NODE_H */

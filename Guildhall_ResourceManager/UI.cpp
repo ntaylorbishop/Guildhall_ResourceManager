@@ -4,6 +4,9 @@
 UI::UI() {
 	terminate = false;
 }
+UI::~UI() {
+
+}
 void UI::run() {
 	cout << "Welcome to the Guildhall Resource Manager!" << endl;
 	outputOptions();
@@ -35,6 +38,10 @@ void UI::askForFile() {
 	else {
 		file.open(fileName.c_str(), fstream::in);
 		if (file.is_open()) {
+			//load file contents into string
+			string str((istreambuf_iterator<char>(file)), istreambuf_iterator<char>());
+			NodeList.loadFromFile(str);
+
 			cout << endl << "Graph loaded successfully." << endl;
 			file.close();
 			outputOptions();
@@ -52,22 +59,22 @@ void UI::loadFromFile(string fileName) {
 }
 
 void UI::takeInput(int inp) {
-	if (inp == 1) {
+	if (inp == 1) { //Load from file
 		askForFile();
 	}
-	else if (inp == 2) {
+	else if (inp == 2) { //Add node
 		cout << "do some shiz" << endl;
 		outputOptions();
 	}
-	else if (inp == 3) {
+	else if (inp == 3) { //Add link
 		cout << "do some shiz" << endl;
 		outputOptions();
 	}
-	else if (inp == 4) {
-		cout << "do some shiz" << endl;
+	else if (inp == 4) { //Display graph
+		NodeList.displayGraph();
 		outputOptions();
 	}
-	else if (inp == 5) {
+	else if (inp == 5) { //Quit
 		terminate = true;
 	}
 	else {

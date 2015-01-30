@@ -8,25 +8,17 @@
 #include "Node.h"
 
 Node::Node(string root) {
-}
-Node::Node(const Node& orig) {
+	this->root = root;
 }
 Node::~Node() {
 }
 
-void Node::loadFromFile(string fileContents) {
-
-}
-void Node::addLink(Node* link) {
-
-}
-void Node::displayGraph() {
-
+void Node::addLink(string link) {
+	links.push_back(link);
 }
 string Node::getName() {
 	return root;
 }
 vector<string> Node::getLinks() {
-	vector<string> dummy;
-	return dummy;
+	return links;
 }

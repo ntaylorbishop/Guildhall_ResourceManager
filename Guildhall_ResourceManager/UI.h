@@ -12,6 +12,7 @@ using namespace std;
 class UI {
 public:
 	UI();
+	virtual ~UI();
 
 	void run();
 

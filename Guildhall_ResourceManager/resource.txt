@@ -1,4 +1,4 @@
-handgun bullets
+handgun bullets ore bombs
 bullets ore
 bombs ore
 turret bullets

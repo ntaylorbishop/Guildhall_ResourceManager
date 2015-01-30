@@ -11,18 +11,27 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
+#include <iostream>
+#include <sstream>
+
+#include "Node.h"
+
+//DEBUG
+#include <iostream>
 
 using namespace std;
 
 class List {
 public:
     List();
-    List(const List& orig);
     virtual ~List();
 
 	void loadFromFile(string fileContents);
+	void displayGraph();
+	bool isNodeUsable(string nodeName);
+	void writeToFile();
 private:
-	vector<string> list;
+	vector<Node> list;
 };
 
 #endif	/* LIST_H */
