@@ -19,7 +19,7 @@ void UI::outputOptions() {
 	cout << endl << "Please choose an option (Type corresponding number and hit enter): " << endl;
 	cout << "\t1. Load from file" << endl;
 	cout << "\t2. Add Node to graph" << endl;
-	cout << "\t3. Add Link to node" << endl;
+	cout << "\t3. Add Links to node" << endl;
 	cout << "\t4. Display graph" << endl;
 	cout << "\t5. Write graph to file" << endl;
 	cout << "\t6. End progarm" << endl;
@@ -61,17 +61,41 @@ void UI::takeInput(int inp) {
 	}
 	else if (inp == 2) { //Add node
 		string str;
-		cout << endl << "Please input a string of elements, with the root first and each element separated by a single whitespace:" << endl;
-		cin >> str;
-		NodeList.addNode(str);
+		cout << endl << "Please input a string of elements, with the root first and each element separated by a single whitespace (Type 'b' to go back):" << endl;
+		
+		//Wait for input and take in entire line. cin tokenizes with whitespace
+		string tmp;
+		cin >> tmp;
+		getline(cin, str);
+		tmp += str;
+		str = tmp;
+		
+		if (str == "b")
+			outputOptions();
+		else
+			NodeList.addNode(str);
 		outputOptions();
 	}
-	else if (inp == 3) { //Add link
+	else if (inp == 3) { //Add links
 		string str;
-		cout << endl << "Please input two elements, with the first being the node and the second being the link to add,";
-		cout << "separated by a single whitespace : " << endl;
-		cin >> str;
-		NodeList.addLinkToNode(str);
+		cout << endl << "Please input elements, where the first is the node and the rest being the links to add,";
+		cout << "separated by a single whitespace (Type 'b' to go back): " << endl;
+
+		//Wait for input and take in entire line. cin tokenizes with whitespace
+		string tmp;
+		cin >> tmp;
+		getline(cin, str);
+		tmp += str;
+		str = tmp;
+
+		if (str == "b")
+			outputOptions();
+		else {
+			if (NodeList.addLinksToNode(str))
+				cout << endl << "Links to node added successfully." << endl;
+			else
+				cout << endl << "Node does not exist. Please try again." << endl;
+		}
 		outputOptions();
 	}
 	else if (inp == 4) { //Display graph

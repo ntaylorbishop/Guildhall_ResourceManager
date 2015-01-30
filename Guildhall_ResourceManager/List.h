@@ -27,7 +27,7 @@ public:
     virtual ~List();
 
 	void addNode(string node);
-	bool addLinkToNode(string link);
+	bool addLinksToNode(string link);
 	void loadFromFile(string fileContents);
 	void displayGraph();
 	bool isNodeUsable(string nodeName);

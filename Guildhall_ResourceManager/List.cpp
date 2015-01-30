@@ -23,37 +23,45 @@ void List::addNode(string node) {
 	while (ss >> str) {
 		if (counter == 0)
 			newNode.setName(str);
-		newNode.addLink(str);
+		else
+			newNode.addLink(str);
 		counter++;
 	}
 	list.push_back(newNode);
+
+	cout << endl << "Node added successfully." << endl;
 }
-bool List::addLinkToNode(string link) {
+bool List::addLinksToNode(string link) {
 	bool nodeExists = false;
 	int idx;
 	stringstream ss(link);
 	int counter = 0;
 	string str;
 	string root; 
-	string linkToAdd;
+	vector<string> linksToAdd;
 
 	while (ss >> str) {
 		if (counter == 0)
 			root = str;
 		else
-			linkToAdd = str;
+			linksToAdd.push_back(str);
 		counter++;
 	}
 
+
 	for (int i = 0; i < list.size(); i++) {
-		if (list.at(i).getName() == link) {
+		if (list.at(i).getName() == root) {
+			cout << list.at(i).getName() << endl;
 			nodeExists = true;
 			idx = i;
 			break;
 		}
 	}
-	if (nodeExists = true)
-		list.at(idx).addLink(link);
+	if (nodeExists) {
+		for (int i = 0; i < linksToAdd.size(); i++) {
+			list.at(idx).addLink(linksToAdd.at(i));
+		}
+	}
 	return nodeExists;
 }
 void List::loadFromFile(string fileContents) {
